@@ -7,12 +7,14 @@ import { configureStore, createStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/CounterReducer'
 import userReducer from './feature/User'
+import themeReducer from './feature/theme'
 
 // const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENTION && window.__REDUX_DEVTOOLS_EXTENTION_())
 
 const store = configureStore({
   reducer: {
-    user: userReducer
+    user: userReducer,
+    theme: themeReducer
   }
 })
 
