@@ -3,11 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createStore } from '@reduxjs/toolkit';
+import { configureStore, createStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/CounterReducer'
+import userReducer from './feature/User'
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENTION && window.__REDUX_DEVTOOLS_EXTENTION_())
+// const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENTION && window.__REDUX_DEVTOOLS_EXTENTION_())
+
+const store = configureStore({
+  reducer: {
+    user: userReducer
+  }
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
