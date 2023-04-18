@@ -1,12 +1,12 @@
 import './App.css';
-import CounterComponent from './componenets/CounterComponent';
-import ButtonComponent from './componenets/ButtonComponent';
+import Login from './componenets/Login';
+import Profile from './componenets/Profile';
 
 function App() {
   return (
     <div className="App">
-      <CounterComponent />
-      <ButtonComponent />
+      <Profile />
+      <Login />      
     </div>
   );
 }
